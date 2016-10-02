@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:wildwood" 
+		x:Class="wildwood.wildwoodPage"
+		Title="Tweet Filter Extravaganza">
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness">
+			<OnPlatform.iOS>
+			0, 20, 0, 0
+			</OnPlatform.iOS>
+			<OnPlatform.Android>
+			0, 0, 0, 0
+			</OnPlatform.Android>
+		</OnPlatform>
+	</ContentPage.Padding>
+	<ContentPage.Content>
+	<StackLayout Padding="5,10">
+		<StackLayout Orientation="Horizontal">
+			<Editor x:Name="SearchEditor" Text="Type your search here"></Editor>
+			<Button x:Name="SearchButton" Text="Search"></Button>
+		</StackLayout>
+		<ListView x:Name="TweetsListView">
+		    <ListView.ItemTemplate>
+		      <DataTemplate>
+				<ImageCell 
+					Text="{Binding User.Name}"
+					ImageSource="{Binding User.ProfileImageUrl}" 
+					Detail="{Binding Text}"/>
+		      </DataTemplate>
+		    </ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
