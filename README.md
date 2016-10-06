@@ -1,6 +1,6 @@
-# XamarinBootcamp
+# Xamarin Bootcamp
 
-This is the resulting application from the Megsoft's Xamarin Bootcamp
+This is the resulting application from the [Megsoft](https://github.com/megsoftconsulting)'s Xamarin Bootcamp
 
 Here are some screenshot for the curious eyes:
 
